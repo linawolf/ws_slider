@@ -14,7 +14,7 @@ Introduction
 ** Check out the demo **
 
 Online Demo:
-`https://demo10.t3bootstrap.de/de/extensions/ws-slider/ <https://demo10.t3bootstrap.de/de/extensions/ws-slider/>`_
+`https://demo12.t3bootstrap.de/de/extensions/ws-slider/ <https://demo12.t3bootstrap.de/de/extensions/ws-slider/>`_
 
 **Highlight**
 
