@@ -113,7 +113,6 @@
 
                     <settings.js.speed>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.animationSpeed</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.speed.description</description>
                             <config>
@@ -176,7 +175,6 @@
 
                     <settings.js.autoplayTimeout>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.autoplayTimeout</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.autoplayTimeout.description</description>
                             <config>
@@ -359,7 +357,6 @@
 
                     <settings.js.lazyloadSelector>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.lazyloadSelector</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.lazyloadSelector.description</description>
                             <config>
@@ -422,7 +419,6 @@
 
                     <settings.js.startIndex>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.startIndex</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.startIndex.description</description>
                             <config>
@@ -495,7 +491,6 @@
 
                     <settings.js.navContainer>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.navContainer</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.navContainer.description</description>
                             <config>
@@ -581,7 +576,6 @@
 
                     <settings.js.controlsContainer>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.controlsContainer</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.controlsContainer.description</description>
                             <config>
@@ -595,7 +589,6 @@
 
                     <settings.js.prevButton>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.customPrevButton</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.prevButton.description</description>
                             <config>
@@ -609,7 +602,6 @@
 
                     <settings.js.nextButton>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.customNextButton</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.nextButton.description</description>
                             <config>
@@ -843,7 +835,6 @@
 
                     <settings.js.swipeAngle>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.swipeAngle</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.swipeAngle.description</description>
                             <config>
@@ -896,7 +887,6 @@
                 <el>
                     <settings.js.animateIn>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.animateIn</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.animateIn.description</description>
                             <config>
@@ -910,7 +900,6 @@
 
                     <settings.js.animateOut>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.animateOut</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.animateOut.description</description>
                             <config>
@@ -924,7 +913,6 @@
 
                     <settings.js.animateNormal>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.animateNormal</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.animateNormal.description</description>
                             <config>
@@ -938,7 +926,6 @@
 
                     <settings.js.animateDelay>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.animateDelay</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.animateDelay.description</description>
                             <config>
@@ -987,7 +974,6 @@
                 <el>
                     <settings.js.onInit>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.onInit</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.onInit.description</description>
                             <config>
@@ -1026,7 +1012,6 @@
 
                     <settings.js.nonce>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.nonce</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider_csh_flexforms.xlf:tinyslider.settings.js.nonce.description</description>
                             <config>
@@ -1051,7 +1036,6 @@
                 <el>
                     <settings.js.responsive.dummy.startIndex>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.startIndex</label>
                             <config>
                                 <type>input</type>
@@ -1065,7 +1049,6 @@
 
                     <settings.js.responsive.dummy.items>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.items</label>
                             <config>
                                 <type>input</type>
@@ -1079,7 +1062,6 @@
 
                     <settings.js.responsive.dummy.slideBy>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/tinyslider.xlf:settings.slideBy</label>
                             <config>
                                 <type>input</type>
@@ -1093,7 +1075,6 @@
 
                     <settings.js.responsive.dummy.speed>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.animationSpeed</label>
                             <config>
                                 <type>input</type>

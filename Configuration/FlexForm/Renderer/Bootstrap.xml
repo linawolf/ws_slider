@@ -14,7 +14,6 @@
                 <el>
                     <settings.js.interval>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.interval</label>
                             <config>
                                 <type>select</type>
@@ -27,7 +26,6 @@
 
                     <settings.js.keyboard>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.keyboard</label>
                             <config>
                                 <type>select</type>
@@ -51,7 +49,6 @@
 
                     <settings.js.pause>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.pause</label>
                             <config>
                                 <type>select</type>
@@ -75,7 +72,6 @@
 
                     <settings.js.ride>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.ride</label>
                             <config>
                                 <type>select</type>
@@ -103,7 +99,6 @@
 
                     <settings.js.touch>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.touch</label>
                             <config>
                                 <type>select</type>
@@ -127,7 +122,6 @@
 
                     <settings.js.wrap>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.wrap</label>
                             <config>
                                 <type>select</type>
@@ -151,7 +145,6 @@
 
                     <settings.js.control>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.control</label>
                             <config>
                                 <type>select</type>
@@ -175,7 +168,6 @@
 
                     <settings.js.indicators>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.indicators</label>
                             <config>
                                 <type>select</type>
@@ -199,7 +191,6 @@
 
                     <settings.js.title>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.title</label>
                             <config>
                                 <type>select</type>
@@ -223,7 +214,6 @@
 
                     <settings.js.description>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.description</label>
                             <config>
                                 <type>select</type>
@@ -247,7 +237,6 @@
 
                     <settings.js.startAt>
                         <TCEforms>
-                            <exclude>1</exclude>
                             <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.startAt</label>
                             <description>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap_csh_flexforms.xlf:bootstrap.settings.js.startAt.description</description>
                             <config>
