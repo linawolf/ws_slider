@@ -11,6 +11,7 @@ return [
         'type' => 'type',
         'typeicon_column' => 'type',
         'typeicon_classes' => [
+            'default' => 'ext-wsslider-image',
             'bootstrap' => 'ext-wsslider-preset-type-bootstrap',
             'flexslider' => 'ext-wsslider-preset-type-flexslider',
             'owl' => 'ext-wsslider-preset-type-owl',
