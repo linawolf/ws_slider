@@ -8,10 +8,10 @@ $EM_CONF['ws_slider'] = [
     'author_email' => 'typo3YYYY@wappler.systems',
     'author_company' => 'WapplerSystems',
     'state' => 'stable',
-    'version' => '12.1.4',
+    'version' => '13.1.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.4.99',
+            'typo3' => '13.0.0-13.4.99',
             'fluid_styled_content' => '',
         ],
         'conflicts' => [
