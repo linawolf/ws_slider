@@ -3,25 +3,7 @@ declare(strict_types=1);
 
 namespace WapplerSystems\WsSlider\Backend\Form\Element;
 
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
-
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
-use TYPO3\CMS\Backend\Form\NodeFactory;
-use TYPO3\CMS\Core\Imaging\IconRegistry;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
-use WapplerSystems\WsSlider\Configuration\ConfigurationManager;
 use WapplerSystems\WsSlider\Service\TypoScriptService;
 
 /**
@@ -65,6 +47,11 @@ class CheckboxToggleWithTypoScriptPlaceholderElement extends AbstractFormElement
     ];
 
 
+    public function __construct(readonly private TypoScriptService $typoScriptService)
+    {
+
+    }
+
     /**
      * This will render a checkbox or an array of checkboxes
      *
@@ -74,7 +61,7 @@ class CheckboxToggleWithTypoScriptPlaceholderElement extends AbstractFormElement
     {
         $resultArray = $this->initializeResultArray();
 
-        $typoscript = TypoScriptService::getTypoScript($this->data['parentPageRow']['uid'], 0, $this->data['rootline'], $this->data['site']);
+        $typoscript = $this->typoScriptService->getTypoScript($this->data['parentPageRow']['uid'], $this->data['request'], 0, $this->data['rootline'], $this->data['site']);
 
 
         $elementHtml = '';

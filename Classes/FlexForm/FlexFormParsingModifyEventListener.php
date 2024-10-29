@@ -7,9 +7,9 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Configuration\Event\BeforeFlexFormDataStructureIdentifierInitializedEvent;
 use TYPO3\CMS\Core\Configuration\Event\BeforeFlexFormDataStructureParsedEvent;
 use TYPO3\CMS\Core\Localization\LanguageService;
-use TYPO3\CMS\Core\Messaging\AbstractMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessageService;
+use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Form\Mvc\Configuration\Exception\NoSuchFileException;
@@ -31,6 +31,12 @@ final class FlexFormParsingModifyEventListener
     public const L10N_PREFIX = 'LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:';
 
 
+    public function __construct(readonly private TypoScriptService $typoScriptService)
+    {
+
+    }
+
+
     public function setDataStructureIdentifier(
         BeforeFlexFormDataStructureIdentifierInitializedEvent $event
     ): void
@@ -40,6 +46,13 @@ final class FlexFormParsingModifyEventListener
 
         if ($event->getTableName() === 'tt_content' && $event->getFieldName() === 'pi_flexform' && $row['CType'] === 'ws_slider') {
             $pageTs = BackendUtility::getPagesTSconfig($row['pid']);
+
+            $identifier = [
+                'type' => 'tca',
+                'tableName' => 'tt_content',
+                'fieldName' => 'pi_flexform',
+                'dataStructureKey' => '*,ws_slider',
+            ];
 
             if ((int)$row['tx_wsslider_preset'] !== 0 && $row['tx_wsslider_preset'] !== '') {
                 $identifier['ext-wsslider-extendSheets'] = 'Preset';
@@ -55,7 +68,7 @@ final class FlexFormParsingModifyEventListener
 
             $identifier['pageTs'] = $pageTs['tx_wsslider.'] ?? [];
 
-            $typoscript = TypoScriptService::getTypoScript($row['pid']);
+            $typoscript = $this->typoScriptService->getTypoScript($row['pid']);
 
             $tsSettings = TypoScriptService::getTypoScriptValueByPath($typoscript->toArray(),'plugin.tx_wsslider.settings');
             $defaultValue = null;
@@ -103,7 +116,7 @@ final class FlexFormParsingModifyEventListener
             $rendererKey = $identifier['fieldName'];
         }
 
-        if ($rendererKey !== null) {
+        if ($rendererKey !== null && $rendererKey !== '0') {
             try {
 
                 if ($dataStructure === null) {
@@ -122,11 +135,11 @@ final class FlexFormParsingModifyEventListener
                     foreach ($identifier['pageTs']['responsiveBreakpoints.'] ?? [] as $bpPixel => $bpName) {
 
                         $newSheet = $dataStructure['sheets']['responsive.dummy'];
-                        $newSheet['ROOT']['TCEforms']['sheetTitle'] = 'Responsive > '.$bpPixel;
+                        $newSheet['ROOT']['sheetTitle'] = 'Responsive > '.$bpPixel;
 
                         foreach ($newSheet['ROOT']['el'] as $fieldName => $field) {
 
-                            $field['TCEforms']['config']['typoscriptPath'] = str_replace('dummy',(string)$bpPixel,$field['TCEforms']['config']['typoscriptPath']);
+                            $field['config']['typoscriptPath'] = str_replace('dummy',(string)$bpPixel,$field['config']['typoscriptPath']);
                             $newSheet['ROOT']['el'][str_replace('dummy',(string)$bpPixel,$fieldName)] = $field;
                             unset($newSheet['ROOT']['el'][$fieldName]);
                         }
@@ -178,7 +191,7 @@ final class FlexFormParsingModifyEventListener
                     FlashMessage::class,
                     $messageText,
                     $this->getLanguageService()->sL(self::L10N_PREFIX . 'tt_content.preview.invalidFrameworkConfiguration.title'),
-                    AbstractMessage::ERROR,
+                    ContextualFeedbackSeverity::ERROR,
                     true
                 )
             );

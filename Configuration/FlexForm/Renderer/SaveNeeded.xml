@@ -7,22 +7,22 @@
 
         <preset>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle></sheetTitle>
-                </TCEforms>
+
+                <sheetTitle></sheetTitle>
+
                 <type>array</type>
                 <el>
                     <preset>
-                        <TCEforms>
-                            <label></label>
-                            <config>
-                                <type>user</type>
-                                <renderType>infoTextRenderType</renderType>
-                                <parameters>
-                                    <text>You must save the data record once</text>
-                                </parameters>
-                            </config>
-                        </TCEforms>
+
+                        <label></label>
+                        <config>
+                            <type>user</type>
+                            <renderType>infoTextRenderType</renderType>
+                            <parameters>
+                                <text>You must save the data record once</text>
+                            </parameters>
+                        </config>
+
                     </preset>
 
 

@@ -7,22 +7,22 @@
 
         <preset>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle></sheetTitle>
-                </TCEforms>
+
+                <sheetTitle></sheetTitle>
+
                 <type>array</type>
                 <el>
                     <preset>
-                        <TCEforms>
-                            <label></label>
-                            <config>
-                                <type>user</type>
-                                <renderType>infoTextRenderType</renderType>
-                                <parameters>
-                                    <text>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:preset_is_set</text>
-                                </parameters>
-                            </config>
-                        </TCEforms>
+
+                        <label></label>
+                        <config>
+                            <type>user</type>
+                            <renderType>infoTextRenderType</renderType>
+                            <parameters>
+                                <text>LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:preset_is_set</text>
+                            </parameters>
+                        </config>
+
                     </preset>
 
 

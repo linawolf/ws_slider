@@ -7,21 +7,19 @@
 
         <sDef>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>Dummy</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>Dummy</sheetTitle>
+
                 <type>array</type>
                 <el>
 
                     <dummy>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Dummy</label>
-                            <displayCond>FIELD:parentRec.tx_wsslider_renderer:=:test</displayCond>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>Dummy</label>
+                        <displayCond>FIELD:parentRec.tx_wsslider_renderer:=:test</displayCond>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </dummy>
 
                 </el>

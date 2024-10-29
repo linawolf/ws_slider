@@ -121,7 +121,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
             'type' => 'select',
             'renderType' => 'selectSingleWithTypoScriptPlaceholder',
             'typoscriptPath' => 'plugin.tx_wsslider.settings.defaultRenderer',
-            'eval' => 'null',
+            // 'eval' => 'null', # Do not, otherwise an error will be thrown
         ],
         'displayCond' => 'FIELD:tx_wsslider_preset:=:0',
     ],

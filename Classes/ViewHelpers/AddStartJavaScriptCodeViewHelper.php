@@ -3,11 +3,10 @@
 namespace WapplerSystems\WsSlider\ViewHelpers;
 
 
+use TYPO3\CMS\Core\Page\AssetCollector;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
@@ -19,6 +18,11 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 class AddStartJavaScriptCodeViewHelper extends AbstractTagBasedViewHelper
 {
 
+    public function __construct(
+        protected AssetCollector $assetCollector,
+    ) {
+        parent::__construct();
+    }
 
     /**
      * Initialize
@@ -32,8 +36,6 @@ class AddStartJavaScriptCodeViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('selector', 'string', '', false, '');
         $this->registerArgument('overrideParameters', 'array', '', false, []);
         $this->registerArgument('name', 'string', 'Name argument - see PageRenderer documentation', true);
-        $this->registerArgument('compress', 'boolean', 'Compress argument - see PageRenderer documentation', false, true);
-        $this->registerArgument('forceOnTop', 'boolean', 'ForceOnTop argument - see PageRenderer documentation', false, false);
     }
 
     /**
@@ -65,23 +67,12 @@ class AddStartJavaScriptCodeViewHelper extends AbstractTagBasedViewHelper
 
 
     /**
-     * Returns TRUE if what we are outputting may be cached
-     *
-     * @return boolean
-     */
-    protected function isCached()
-    {
-        $userObjType = $this->configurationManager->getContentObject()->getUserObjectType();
-        return ($userObjType !== ContentObjectRenderer::OBJECTTYPE_USER_INT);
-    }
-
-
-    /**
      * Render
      *
-     * @param string $block
+     * @return string
+     * @throws \JsonException
      */
-    public function render()
+    public function render() : string
     {
 
         $parameters = $this->arguments['defaultParameters'];
@@ -117,17 +108,9 @@ class AddStartJavaScriptCodeViewHelper extends AbstractTagBasedViewHelper
 
         $html = implode('', $block);
 
-        if ($this->isCached()) {
-            $this->pageRenderer->addJsFooterInlineCode(
-                $this->arguments['name'],
-                $html,
-                $this->arguments['compress'],
-                $this->arguments['forceOnTop']
-            );
-        } else {
-            // additionalFooterData not possible in USER_INT
-            $GLOBALS['TSFE']->additionalFooterData[md5($this->arguments['name'])] = GeneralUtility::wrapJS($html);
-        }
+        $this->assetCollector->addInlineJavaScript($this->arguments['name'], $html);
+
+        return '';
     }
 
 

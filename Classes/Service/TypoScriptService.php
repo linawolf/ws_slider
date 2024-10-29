@@ -8,14 +8,13 @@ use TYPO3\CMS\Core\Error\Http\AbstractServerErrorException;
 use TYPO3\CMS\Core\Exception\SiteNotFoundException;
 use TYPO3\CMS\Core\Http\PropagateResponseException;
 use TYPO3\CMS\Core\Http\ServerRequest;
-use TYPO3\CMS\Core\Routing\PageArguments;
 use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Site\SiteFinder;
 use TYPO3\CMS\Core\TypoScript\AST\Node\RootNode;
+use TYPO3\CMS\Core\TypoScript\FrontendTypoScriptFactory;
+use TYPO3\CMS\Core\TypoScript\IncludeTree\SysTemplateRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
-use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 
 class TypoScriptService
@@ -24,6 +23,12 @@ class TypoScriptService
      * @var RootNode
      */
     protected static RootNode $typoScript;
+
+
+    public function __construct(readonly FrontendTypoScriptFactory $frontendTypoScriptFactory, readonly SysTemplateRepository $sysTemplateRepository)
+    {
+
+    }
 
     /**
      * @param int $pageUid
@@ -35,19 +40,16 @@ class TypoScriptService
      * @throws AbstractServerErrorException
      * @throws PropagateResponseException
      */
-    public static function getTypoScript(int $pageUid, int $languageUid = 0, array $rootLine = [], Site $site = null): RootNode
+    public function getTypoScript(int $pageUid, ?ServerRequest $request = null, int $languageUid = 0, array $rootLine = [], Site $site = null): RootNode
     {
         if (isset(self::$typoScript) && self::$typoScript !== null) {
             return self::$typoScript;
         }
 
-        //
-        // In case of executing by console, any request url must be available!
-        $requestUrl = GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL');
-        if (is_string($requestUrl) && substr($requestUrl, 0, 8) === 'http:///') {
-            GeneralUtility::setIndpEnv('TYPO3_REQUEST_URL', 'https://www.dummy.domain/');
+        if ($site === null && $request !== null) {
+            $site = $request->getAttribute('site');
         }
-        //
+
         // Ensure the rootline is available
         if (count($rootLine) === 0) {
             /** @var RootlineUtility $rootlineUtility */
@@ -61,39 +63,28 @@ class TypoScriptService
             $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
             $site = $siteFinder->getSiteByPageId($pageUid);
         }
-        //
-        // Ensure TSFE is initialized, otherwise there might be some errors
-        $unsetTSFE = false;
-        if (!isset($GLOBALS['TSFE'])) {
-            $unsetTSFE = true;
-            $context = GeneralUtility::makeInstance(Context::class);
-            $frontendUserAuthentication = GeneralUtility::makeInstance(FrontendUserAuthentication::class);
-            $pageArguments = GeneralUtility::makeInstance(PageArguments::class, $pageUid, '', []);
-            $typoScriptFrontendController = GeneralUtility::makeInstance(
-                TypoScriptFrontendController::class,
-                $context,
-                $site,
-                $site->getLanguageById($languageUid),
-                $pageArguments,
-                $frontendUserAuthentication
-            );
 
-            $GLOBALS['TSFE'] = $typoScriptFrontendController;
-        }
-        $typoScriptFrontendController = $GLOBALS['TSFE'];
-        $typoScriptFrontendController->rootLine = $rootLine;
 
-        $request = new ServerRequest();
-        $request = $typoScriptFrontendController->getFromCache($request);
+        $sysTemplateRows = $this->sysTemplateRepository->getSysTemplateRowsByRootline($rootLine, $request);
+        $frontendTypoScript = $this->frontendTypoScriptFactory->createSettingsAndSetupConditions(
+            $site,
+            $sysTemplateRows,
+            [],
+            null,
+        );
 
-        $settingsTree = $request->getAttribute('frontend.typoscript')->getSetupTree();
+        $frontendTypoScript = $this->frontendTypoScriptFactory->createSetupConfigOrFullSetup(
+            true,
+            $frontendTypoScript,
+            $site,
+            $sysTemplateRows,
+            [],
+            0,
+            null,
+            $request,
+        );
 
-        if ($unsetTSFE) {
-            $GLOBALS['TSFE'] = null;
-        }
-
-        self::$typoScript = $settingsTree;
-        return self::$typoScript;
+        return $frontendTypoScript->getSetupTree();
     }
 
     public static function getTypoScriptValueByPath(array $tsArray, string $path) {

@@ -7,271 +7,338 @@
 
         <flexslider>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.flexslider</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.flexslider</sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.animation>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animation</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animation.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animation</typoscriptPath>
-                                <eval>null</eval>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.fade</numIndex>
-                                        <numIndex index="value">fade</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animation</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animation.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animation</typoscriptPath>
+                            <eval>null</eval>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.fade
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slide</numIndex>
-                                        <numIndex index="value">slide</numIndex>
+                                    <numIndex index="value">fade</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slide
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">slide</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.animation>
 
                     <settings.js.easing>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.easing</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.easing.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.easing</typoscriptPath>
-                                <size>12</size>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.easing</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.easing.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.easing</typoscriptPath>
+                            <size>12</size>
+                        </config>
+
                     </settings.js.easing>
 
                     <settings.js.direction>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.direction</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.direction.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.direction</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.vertical</numIndex>
-                                        <numIndex index="value">vertical</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.direction</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.direction.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.direction</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.vertical
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.horizontal</numIndex>
-                                        <numIndex index="value">horizontal</numIndex>
+                                    <numIndex index="value">vertical</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.horizontal
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">horizontal</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.direction>
 
                     <settings.js.reverse>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.reverse</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.reverse.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.reverse</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.reverse</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.reverse.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.reverse</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.reverse>
 
                     <settings.js.animationLoop>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animationLoop</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animationLoop.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animationLoop</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animationLoop
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animationLoop.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animationLoop
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.animationLoop>
 
                     <settings.js.smoothHeight>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.smoothHeight</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.smoothHeight.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.smoothHeight</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.smoothHeight</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.smoothHeight.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.smoothHeight
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.smoothHeight>
 
                     <settings.js.startAt>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.startAt</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.startAt.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.startAt</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.startAt</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.startAt.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.startAt</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.startAt>
 
                     <settings.js.slideshow>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slideshow</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.slideshow.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.slideshow</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slideshow</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.slideshow.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.slideshow</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.slideshow>
 
                     <settings.js.slideshowSpeed>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slideshowSpeed</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.slideshowSpeed.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.slideshowSpeed</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.slideshowSpeed
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.slideshowSpeed.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.slideshowSpeed
+                            </typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.slideshowSpeed>
 
                     <settings.js.animationSpeed>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animationSpeed</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animationSpeed.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animationSpeed</typoscriptPath>
-                                <size>12</size>
-                                <eval>num</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.animationSpeed
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.animationSpeed.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.animationSpeed
+                            </typoscriptPath>
+                            <size>12</size>
+                            <eval>num</eval>
+                        </config>
+
                     </settings.js.animationSpeed>
 
                     <settings.js.initDelay>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.initDelay</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.initDelay.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.initDelay</typoscriptPath>
-                                <size>12</size>
-                                <eval>num</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.initDelay</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.initDelay.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.initDelay</typoscriptPath>
+                            <size>12</size>
+                            <eval>num</eval>
+                        </config>
+
                     </settings.js.initDelay>
 
                     <settings.js.randomize>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.randomize</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.randomize.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.randomize</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.randomize</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.randomize.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.randomize</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.randomize>
 
                     <settings.js.fadeFirstSlide>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.fadeFirstSlide</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.fadeFirstSlide.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.fadeFirstSlide</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.fadeFirstSlide
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.fadeFirstSlide.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.fadeFirstSlide
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.fadeFirstSlide>
                 </el>
             </ROOT>
@@ -279,153 +346,194 @@
 
         <usablity>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.usability</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.usability</sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.pauseOnAction>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseOnAction</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseOnAction.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseOnAction</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseOnAction
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseOnAction.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseOnAction
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.pauseOnAction>
 
                     <settings.js.pauseOnHover>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseOnHover</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseOnHover.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseOnHover</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseOnHover</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseOnHover.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseOnHover
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.pauseOnHover>
 
                     <settings.js.pauseInvisible>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseInvisible</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseInvisible.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseInvisible</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pauseInvisible
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pauseInvisible.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pauseInvisible
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.pauseInvisible>
 
                     <settings.js.useCSS>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.useCSS</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.useCSS.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.useCSS</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.useCSS</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.useCSS.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.useCSS</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.useCSS>
 
                     <settings.js.touch>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.touch</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.touch.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.touch</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.touch</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.touch.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.touch</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.touch>
 
                     <settings.js.video>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.video</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.video.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.video</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.video</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.video.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.video</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.video>
                 </el>
             </ROOT>
@@ -433,58 +541,72 @@
 
         <primarycontrols>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.primaryControls</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.primaryControls
+                </sheetTitle>
+
                 <type>array</type>
                 <el>
 
                     <settings.js.controlNav>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.controlNav</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.controlNav.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.controlNav</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.controlNav</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.controlNav.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.controlNav</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.controlNav>
 
                     <settings.js.directionNav>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.directionNav</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.directionNav.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.directionNav</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.directionNav</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.directionNav.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.directionNav
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.directionNav>
 
                 </el>
@@ -493,105 +615,132 @@
 
         <secondarynavigation>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.secondaryNavigation</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.secondaryNavigation
+                </sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.keyboard>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.keyboard</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.keyboard.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.keyboard</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.keyboard</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.keyboard.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.keyboard</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.keyboard>
 
                     <settings.js.multipleKeyboard>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.multipleKeyboard</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.multipleKeyboard.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.multipleKeyboard</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.multipleKeyboard
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.multipleKeyboard.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.multipleKeyboard
+                            </typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.multipleKeyboard>
 
                     <settings.js.mousewheel>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.mousewheel</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.mousewheel.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.mousewheel</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.mousewheel</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.mousewheel.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.mousewheel</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.mousewheel>
 
                     <settings.js.pausePlay>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pausePlay</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pausePlay.description</description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pausePlay</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.pausePlay</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.pausePlay.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.pausePlay</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.pausePlay>
                 </el>
             </ROOT>
@@ -599,92 +748,111 @@
 
         <specialproperties>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.specialProperties</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.specialProperties
+                </sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.selector>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.selector</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.selector.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.selector</typoscriptPath>
-                                <size>12</size>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.selector</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.selector.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.selector</typoscriptPath>
+                            <size>12</size>
+                        </config>
+
                     </settings.js.selector>
 
                     <settings.js.controlsContainer>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.controlsContainer</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.controlsContainer.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.controlsContainer</typoscriptPath>
-                                <size>12</size>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.controlsContainer
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.controlsContainer.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.controlsContainer
+                            </typoscriptPath>
+                            <size>12</size>
+                            <eval>trim</eval>
+                        </config>
+
                     </settings.js.controlsContainer>
 
                     <settings.js.manualControls>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.manualControls</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.manualControls.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.manualControls</typoscriptPath>
-                                <size>12</size>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.manualControls
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.manualControls.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.manualControls
+                            </typoscriptPath>
+                            <size>12</size>
+                            <eval>trim</eval>
+                        </config>
+
                     </settings.js.manualControls>
 
                     <settings.js.customDirectionNav>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.customDirectionNav</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.customDirectionNav.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.customDirectionNav</typoscriptPath>
-                                <size>12</size>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.customDirectionNav
+                        </label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.customDirectionNav.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.customDirectionNav
+                            </typoscriptPath>
+                            <size>12</size>
+                            <eval>trim</eval>
+                        </config>
+
                     </settings.js.customDirectionNav>
 
                     <settings.js.sync>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.sync</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.sync.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.sync</typoscriptPath>
-                                <size>12</size>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.sync</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.sync.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.sync</typoscriptPath>
+                            <size>12</size>
+                            <eval>trim</eval>
+                        </config>
+
                     </settings.js.sync>
 
                     <settings.js.asNavFor>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.asNavFor</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.asNavFor.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.asNavFor</typoscriptPath>
-                                <size>12</size>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.asNavFor</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.asNavFor.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.asNavFor</typoscriptPath>
+                            <size>12</size>
+                            <eval>trim</eval>
+                        </config>
+
                     </settings.js.asNavFor>
                 </el>
             </ROOT>
@@ -692,79 +860,89 @@
 
         <carousel>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.carousel</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:sheet.carousel</sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.itemWidth>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.itemWidth</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.itemWidth.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.itemWidth</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.itemWidth</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.itemWidth.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.itemWidth</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.itemWidth>
 
                     <settings.js.itemMargin>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.itemMargin</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.itemMargin.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.itemMargin</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.itemMargin</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.itemMargin.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.itemMargin</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.itemMargin>
 
                     <settings.js.minItems>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.minItems</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.minItems.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.minItems</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.minItems</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.minItems.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.minItems</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.minItems>
 
                     <settings.js.maxItems>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.maxItems</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.maxItems.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.maxItems</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.maxItems</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.maxItems.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.maxItems</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.maxItems>
 
                     <settings.js.move>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.move</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.move.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.move</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/flexslider.xlf:settings.move</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/flexslider_csh_flexforms.xlf:flexslider.settings.js.move.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.flexslider.move</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.move>
                 </el>
             </ROOT>

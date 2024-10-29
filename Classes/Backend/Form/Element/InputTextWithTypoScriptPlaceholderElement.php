@@ -4,7 +4,6 @@ namespace WapplerSystems\WsSlider\Backend\Form\Element;
 
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Core\Localization\LanguageService;
-use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
@@ -52,16 +51,23 @@ class InputTextWithTypoScriptPlaceholderElement extends AbstractFormElement
         ],
     ];
 
+
+    public function __construct(readonly private TypoScriptService $typoScriptService)
+    {
+
+    }
+
+
     /**
      * This will render a single-line input form field, possibly with various control/validation features
      *
      * @return array As defined in initializeResultArray() of AbstractNode
      */
-    public function render()
+    public function render(): array
     {
         $languageService = $this->getLanguageService();
 
-        $typoscript = TypoScriptService::getTypoScript($this->data['parentPageRow']['uid'], 0, $this->data['rootline'], $this->data['site']);
+        $typoscript = $this->typoScriptService->getTypoScript($this->data['parentPageRow']['uid'], $this->data['request'], 0, $this->data['rootline'], $this->data['site']);
 
         $table = $this->data['tableName'];
         $fieldName = $this->data['fieldName'];
@@ -78,6 +84,10 @@ class InputTextWithTypoScriptPlaceholderElement extends AbstractFormElement
         $size = MathUtility::forceIntegerInRange($config['size'] ?? $this->defaultInputWidth, $this->minimumInputWidth, $this->maxInputWidth);
         $width = $this->formMaxWidth($size);
 
+        $fieldId = StringUtility::getUniqueId('formengine-input-');
+        $itemName = (string)$parameterArray['itemFormElName'];
+        $renderedLabel = $this->renderLabel($fieldId);
+
         # fix for flexform
         $nullControlNameEscaped = 'control[active]' . substr($parameterArray['itemFormElName'], 4);
 
@@ -91,6 +101,7 @@ class InputTextWithTypoScriptPlaceholderElement extends AbstractFormElement
                 $itemValue = $itemValue ? '*********' : '';
             }
             $html = [];
+            $html[] = $renderedLabel;
             $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
             $html[] = $fieldInformationHtml;
             $html[] = '<div class="form-wizards-wrap">';
@@ -307,7 +318,11 @@ class InputTextWithTypoScriptPlaceholderElement extends AbstractFormElement
             $fullElement = implode(LF, $fullElement);
         }
 
-        $resultArray['html'] = '<div class="formengine-field-item t3js-formengine-field-item">' . $fieldInformationHtml . $fullElement . '</div>';
+        $resultArray['html'] = $renderedLabel . '
+            <div class="formengine-field-item t3js-formengine-field-item">
+                ' . $fieldInformationHtml . $fullElement . '
+            </div>';
+
         return $resultArray;
     }
 

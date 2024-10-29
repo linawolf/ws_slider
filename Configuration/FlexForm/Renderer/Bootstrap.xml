@@ -7,246 +7,286 @@
 
         <bootstrap>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:sheet.bootstrap</sheetTitle>
-                </TCEforms>
+
+                <sheetTitle>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:sheet.bootstrap</sheetTitle>
+
                 <type>array</type>
                 <el>
                     <settings.js.interval>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.interval</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.interval</typoscriptPath>
-                                <eval>null</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.interval</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.interval</typoscriptPath>
+                            <eval>null</eval>
+                        </config>
+
                     </settings.js.interval>
 
                     <settings.js.keyboard>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.keyboard</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.keyboard</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.keyboard</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.keyboard</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.keyboard>
 
                     <settings.js.pause>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.pause</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.pause</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.vertical</numIndex>
-                                        <numIndex index="value">vertical</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.pause</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.pause</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.vertical
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.horizontal</numIndex>
-                                        <numIndex index="value">horizontal</numIndex>
+                                    <numIndex index="value">vertical</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:settings.common.horizontal
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">horizontal</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.pause>
 
                     <settings.js.ride>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.ride</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.ride</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.ride</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.ride</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                    <numIndex index="2">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.ride.option.carousel</numIndex>
-                                        <numIndex index="value">carousel</numIndex>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.ride.option.carousel
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">carousel</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.ride>
 
                     <settings.js.touch>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.touch</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.touch</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.touch</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.touch</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.touch>
 
                     <settings.js.wrap>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.wrap</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.wrap</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.wrap</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.wrap</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.wrap>
 
                     <settings.js.control>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.control</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.control</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.control</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.control</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.control>
 
                     <settings.js.indicators>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.indicators</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.indicators</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.indicators</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.indicators</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.indicators>
 
                     <settings.js.title>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.title</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.title</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.title</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.title</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.title>
 
                     <settings.js.description>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.description</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.description</typoscriptPath>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes</numIndex>
-                                        <numIndex index="value">true</numIndex>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.description</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingleWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.description</typoscriptPath>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:yes
                                     </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="label">LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no</numIndex>
-                                        <numIndex index="value">false</numIndex>
+                                    <numIndex index="value">true</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="label">
+                                        LLL:EXT:ws_slider/Resources/Private/Language/locallang.xlf:no
                                     </numIndex>
-                                </items>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="value">false</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+
                     </settings.js.description>
 
                     <settings.js.startAt>
-                        <TCEforms>
-                            <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.startAt</label>
-                            <description>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap_csh_flexforms.xlf:bootstrap.settings.js.startAt.description</description>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputWithTypoScriptPlaceholder</renderType>
-                                <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.startAt</typoscriptPath>
-                                <size>12</size>
-                                <eval>num,trim</eval>
-                            </config>
-                        </TCEforms>
+
+                        <label>LLL:EXT:ws_slider/Resources/Private/Language/bootstrap.xlf:settings.startAt</label>
+                        <description>
+                            LLL:EXT:ws_slider/Resources/Private/Language/bootstrap_csh_flexforms.xlf:bootstrap.settings.js.startAt.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputWithTypoScriptPlaceholder</renderType>
+                            <typoscriptPath>plugin.tx_wsslider.settings.renderer.bootstrap.startAt</typoscriptPath>
+                            <size>12</size>
+                            <eval>num,trim</eval>
+                        </config>
+
                     </settings.js.startAt>
 
                 </el>

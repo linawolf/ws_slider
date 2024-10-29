@@ -2,12 +2,13 @@
 declare(strict_types=1);
 
 namespace WapplerSystems\WsSlider\Backend\Form\Element;
+
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Core\Localization\LanguageService;
 
 class InfoTextElement extends AbstractFormElement
 {
-    public function render()
+    public function render(): array
     {
         $parameters = $this->data['parameterArray']['fieldConf']['config']['parameters'];
         $text = $parameters['text'];
@@ -15,7 +16,7 @@ class InfoTextElement extends AbstractFormElement
         $languageService = $this->getLanguageService();
 
         return [
-            'html' => $languageService->sL($text) ,
+            'html' => $languageService->sL($text),
         ];
     }
 

@@ -19,7 +19,6 @@ use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Backend\Form\InlineStackProcessor;
 use TYPO3\CMS\Backend\Form\Utility\FormEngineUtility;
 use TYPO3\CMS\Core\Page\JavaScriptModuleInstruction;
-use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
 use WapplerSystems\WsSlider\Service\TypoScriptService;
@@ -69,17 +68,24 @@ class SelectSingleWithTypoScriptPlaceholderElement extends AbstractFormElement
         ],
     ];
 
+
+    public function __construct(readonly private TypoScriptService $typoScriptService)
+    {
+
+    }
+
+
     /**
      * Render single element
      *
      * @return array As defined in initializeResultArray() of AbstractNode
      */
-    public function render()
+    public function render(): array
     {
         $resultArray = $this->initializeResultArray();
         $languageService = $this->getLanguageService();
 
-        $typoscript = TypoScriptService::getTypoScript($this->data['parentPageRow']['uid'], 0, $this->data['rootline'], $this->data['site']);
+        $typoscript = $this->typoScriptService->getTypoScript($this->data['parentPageRow']['uid'], $this->data['request'], 0, $this->data['rootline'], $this->data['site']);
 
         $table = $this->data['tableName'];
         $field = $this->data['fieldName'];
@@ -290,32 +296,37 @@ class SelectSingleWithTypoScriptPlaceholderElement extends AbstractFormElement
         $mainFieldHtml[] = '</div>';
         $mainFieldHtml = implode(LF, $mainFieldHtml);
 
-        $fullElement = $mainFieldHtml;
-
         if ($defaultValue !== null) {
-            $fullElement = [];
-            $fullElement[] = '<div class="checkbox t3js-form-field-eval-null-placeholder-checkbox">';
-            $fullElement[] = '<label for="' . $nullControlNameEscaped . '">';
-            $fullElement[] = '<input type="hidden" name="' . $nullControlNameEscaped . '" value="' . $fallbackValue . '" />';
-            $fullElement[] = '<input type="checkbox" name="' . $nullControlNameEscaped . '" id="' . $nullControlNameEscaped . '" value="1"' . $checked . ($disabled ? ' disabled' : '') . ' />';
-            $fullElement[] = $overrideLabel;
-            $fullElement[] = '</label>';
-            $fullElement[] = '</div>';
-            $fullElement[] = '<div class="t3js-formengine-placeholder-placeholder">';
-            $fullElement[] = '<div class="form-control-wrap" >';
-            $fullElement[] = '<select';
-            $fullElement[] = ' class="form-control-adapt form-control"';
-            $fullElement[] = ' disabled="disabled"';
-            $fullElement[] = '>';
-            $fullElement[] = '<option>' . htmlspecialchars($shortenedPlaceholder) . '</option>';
-            $fullElement[] = '</select>';
-            $fullElement[] = '</div>';
-            $fullElement[] = '</div>';
-            $fullElement[] = '<div class="t3js-formengine-placeholder-formfield">';
-            $fullElement[] = $mainFieldHtml;
-            $fullElement[] = '</div>';
-            $fullElement = implode(LF, $fullElement);
+            $defaultValueHtml = [];
+            $defaultValueHtml[] = '<div class="checkbox t3js-form-field-eval-null-placeholder-checkbox">';
+            $defaultValueHtml[] = '<label for="' . $nullControlNameEscaped . '">';
+            $defaultValueHtml[] = '<input type="hidden" name="' . $nullControlNameEscaped . '" value="' . $fallbackValue . '" />';
+            $defaultValueHtml[] = '<input type="checkbox" name="' . $nullControlNameEscaped . '" id="' . $nullControlNameEscaped . '" value="1"' . $checked . ($disabled ? ' disabled' : '') . ' />';
+            $defaultValueHtml[] = $overrideLabel;
+            $defaultValueHtml[] = '</label>';
+            $defaultValueHtml[] = '</div>';
+            $defaultValueHtml[] = '<div class="t3js-formengine-placeholder-placeholder">';
+            $defaultValueHtml[] = '<div class="form-control-wrap" >';
+            $defaultValueHtml[] = '<select';
+            $defaultValueHtml[] = ' class="form-control-adapt form-control"';
+            $defaultValueHtml[] = ' disabled="disabled"';
+            $defaultValueHtml[] = '>';
+            $defaultValueHtml[] = '<option>' . htmlspecialchars($shortenedPlaceholder) . '</option>';
+            $defaultValueHtml[] = '</select>';
+            $defaultValueHtml[] = '</div>';
+            $defaultValueHtml[] = '</div>';
+            $defaultValueHtml[] = '<div class="t3js-formengine-placeholder-formfield">';
+            $defaultValueHtml[] = $mainFieldHtml;
+            $defaultValueHtml[] = '</div>';
+            $mainFieldHtml = implode(LF, $defaultValueHtml);
         }
+
+        $html = [];
+        $html[] = $this->renderLabel($selectId);
+        $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
+        $html[] = $fieldInformationHtml;
+        $html[] = $mainFieldHtml;
+        $html[] = '</div>';
 
 
         $onFieldChangeItems = $this->getOnFieldChangeItems($parameterArray['fieldChangeFunc'] ?? []);
@@ -324,7 +335,7 @@ class SelectSingleWithTypoScriptPlaceholderElement extends AbstractFormElement
         )->invoke('initializeOnReady', '#' . $selectId, ['onChange' => $onFieldChangeItems]);
 
 
-        $resultArray['html'] = '<div class="formengine-field-item t3js-formengine-field-item">' . $fieldInformationHtml . $fullElement . '</div>';
+        $resultArray['html'] = implode(LF, $html);
         return $resultArray;
     }
 

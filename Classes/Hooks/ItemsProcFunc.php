@@ -18,7 +18,7 @@ class ItemsProcFunc
     /** @var TemplateLayout $templateLayoutsUtility */
     protected $templateLayoutsUtility;
 
-    public function __construct()
+    public function __construct(readonly private TypoScriptService $typoScriptService)
     {
         $this->templateLayoutsUtility = GeneralUtility::makeInstance(TemplateLayout::class);
     }
@@ -35,7 +35,7 @@ class ItemsProcFunc
         $currentRenderer = $config['row']['tx_wsslider_renderer'][0] ?? '';
         $rendererTyposcriptPath = $config['config']['rendererTyposcriptPath'];
 
-        $typoscript = TypoScriptService::getTypoScript($pageId);
+        $typoscript = $this->typoScriptService->getTypoScript($pageId, null, 0, [], $config['site']);
         $defaultRenderer = TypoScriptService::getTypoScriptValueByPath($typoscript->toArray(),$rendererTyposcriptPath);
         if ($currentRenderer === '' && $defaultRenderer !== '') $currentRenderer = $defaultRenderer;
 
