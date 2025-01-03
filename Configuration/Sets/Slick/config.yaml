@@ -1,0 +1,4 @@
+name: wapplersystems/ws-slider-slick
+label: WS Slider Slick Slider
+dependencies:
+  - wapplersystems/ws-slider

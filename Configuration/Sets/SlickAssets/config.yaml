@@ -1,0 +1,4 @@
+name: wapplersystems/ws-slider-slick-assets
+label: WS Slider Slick Slider Assets
+dependencies:
+  - wapplersystems/ws-slider-slick

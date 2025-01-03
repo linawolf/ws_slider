@@ -1,0 +1,4 @@
+name: wapplersystems/ws-slider-tiny-slider
+label: WS Slider Tiny Slider
+dependencies:
+  - wapplersystems/ws-slider

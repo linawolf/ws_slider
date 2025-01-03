@@ -1,0 +1,4 @@
+name: wapplersystems/ws-slider-owl-assets
+label: WS Slider Owl Assets
+dependencies:
+  - wapplersystems/ws-slider-owl
